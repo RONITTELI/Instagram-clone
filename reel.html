@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reels - Instagram Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"); -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .reel {
+            color: white;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            top: 0;
+            left: 0;
+            scroll-snap-align: start;
+        }
+
+        .buttonreel {
+            width: auto;
+            /* background-color: aqua; */
+            gap: 20px;
+            display: grid;
+            position: absolute;
+            bottom: 5%;
+            right: 30px;
+            list-style: none;
+            z-index: 2;
+            justify-content: center;
+        }
+
+        li {
+            display: flex;
+            justify-content: center;
+        }
+
+        .textreel {
+            font-size: 50px;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .proicon img {
+            width: 90px;
+            height: 90px;
+            border-radius: 20px;
+            border: 10px solid white;
+        }
+
+        .prolog {
+            width: auto;
+            height: fit-content;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            position: absolute;
+            bottom: 15%;
+        }
+
+        .r1 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            margin-left: 50px;
+        }
+
+        .prolog label {
+            color: white;
+            font-size: 40px;
+            font-weight: 700;
+            padding: 0 30px;
+        }
+
+        .followbtn {
+
+            padding: 15px 35px;
+            border-radius: 20px;
+            background-color: transparent;
+            border: 4px solid white;
+            color: white;
+            font-size: 40px;
+            z-index: 1;
+        }
+
+        .followbtn1 {
+            padding: 15px 35px;
+            border-radius: 20px;
+            /* backgr   ound-color: transparent; */
+            border: 4px solid white;
+            /* color: white; */
+            font-size: 40px;
+            background-color: white;
+            color: rgba(0, 0, 0, 0.474);
+            display: none;
+            z-index: 1;
+        }
+
+        .music {
+            display: flex;
+            font-size: 35px;
+            font-weight: 500;
+            width: fit-content;
+            background-color: rgba(0, 255, 255, 0.07);
+            border: 2px solid rgba(255, 255, 255, 0.17);
+            border-radius: 60px;
+            padding: 10px;
+            margin: 30px 0;
+        }
+
+        .music label {
+            padding: 0 40px;
+        }
+
+        .music svg {
+            padding-left: 20px;
+        }
+
+        #a1 {
+            z-index: 11;
+        }
+
+        #b1 {
+            z-index: 11;
+        }
+
+        #a2 {
+            display: none;
+            color: rgb(255, 0, 102);
+        }
+
+        #b2 {
+            display: none;
+            color: rgb(255, 0, 102);
+        }
+
+        .reel-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* @media screen and (max-width: 1099px)
+.reel>video {
+    width: auto;
+    height: 100%;
+} */
+
+
+        .va1 {
+            width: auto;
+            height: 100%;
+            background-size: cover;
+            overflow-x: hidden;
+        }
+
+        .careel {
+            position: absolute;
+            top: 2%;
+            right: 7%;
+        }
+
+        #reel2 {
+            /* display: none; */
+        }
+
+        .trabox {
+            width: 85%;
+            height: 600px;
+            background-color: transparent;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .trabox1 {
+            width: 85%;
+            height: 600px;
+            background-color: transparent;
+            position: absolute;
+            top: 0;
+        }
+
+        .homebox {
+            width: 700px;
+            height: 1000px;
+            background-color: transparent;
+            position: absolute;
+            top: 20%;
+            z-index: 11;
+        }
+
+        #reel1 {
+            position: relative;
+        }
+
+        .container {
+            width: 100%;
+      height: 100vh;
+      overflow-y:scroll;
+      scroll-snap-type: y mandatory;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="homebox"></a>
+    <div class="container">
+
+        <!-- -------------------------------------------------- first reel -------------------------------------------------- -->
+
+        <section id="reel1">
+            <div class="reel">
+                <video class="reel-video" autoplay loop muted>
+                    <source src="img/2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <ul class="buttonreel">
+                    <li id="a1"><svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor"
+                            class="bi bi-heart" viewBox="0 0 16 16">
+                            <path
+                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                        </svg>
+                    <li id="a2"><svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor"
+                            class="bi bi-heart-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
+                        </svg>
+                    </li>
+                    <li class="textreel">50k</li>
+
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 24 24" fill="none"
+                            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="bi-chat lucide lucide-message-circle">
+                            <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z" />
+                        </svg>
+                    </li>
+
+                    <li class="textreel">2k</li>
+
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 24 24" fill="none"
+                            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-send">
+                            <path d="m22 2-7 20-4-9-9-4Z" />
+                            <path d="M22 2 11 13" />
+                        </svg></li>
+
+                    <li class="textreel">15k</li>
+
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 24 24" fill="none"
+                            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-more-vertical">
+                            <circle cx="12" cy="12" r="1" />
+                            <circle cx="12" cy="5" r="1" />
+                            <circle cx="12" cy="19" r="1" />
+                        </svg></li>
+
+                    <li style="height: 30px;"></li>
+                    <li class="proicon"><img src="img/r1.jpg" alt=""></li>
+                </ul>
+
+                <div class="prolog">
+                    <img class="r1" src="img/r1.jpg" alt="">
+                    <label for="">copy_ninja</label>
+                    <button id="btn1" class="followbtn" type="text">Follow</button>
+                    <button id="btn2" class="followbtn1" type="text">Follow</button>
+
+                </div>
+                <div
+                    style="font-size: 40px; font-weight: 600; padding-left: 50px; padding-top: 50px; position: absolute; bottom: 4%;">
+                    <label for="">Planing of exam ....</label>
+
+                    <div class="music">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                            class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+                            <path
+                                d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2m9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2" />
+                            <path fill-rule="evenodd" d="M14 11V2h1v9zM6 3v10H5V3z" />
+                            <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4z" />
+                        </svg>
+                        <label for=""> copy_ninja .Original audio</label>
+                    </div>
+
+                </div>
+                <div class="careel">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-camera">
+                        <path
+                            d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+                        <circle cx="12" cy="13" r="3" />
+                    </svg>
+                </div>
+            </div>
+
+            <section id="commentbox12">
+                <div class="commentbox" style="height: 0vh;">
+                    <div class="commmentupbat">
+                        <div class="commentbar" id="combar"></div>
+                    </div>
+                    <div class="combox1">
+                        <div style="display: flex; justify-content: center; align-items: flex-end; width:100%;">
+                            <label for="">Comments</label>
+                        </div>
+                        <div style="display: flex; align-items: flex-end;">
+                            <svg style="color: white; padding-right :30px; padding-bottom: 20px;"
+                                xmlns="http://www.w3.org/2000/svg" width="62" height="62" fill="currentColor"
+                                class="bi bi-info-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                                <path
+                                    d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z">
+                                </path>
+                            </svg>
+
+                        </div>
+                    </div>
+
+
+                    <section>
+                        <div class="combx2">
+                            <div class="postmenucom">
+
+
+                                <div class="postmenulogo">
+                                    <img src="img/images (3).jpg" alt="">
+                                </div>
+                                <label class="postname">Amelia <span
+                                        style="font-size:33px; color: lightgray; font-weight: 500;">1w</span></label>
+                                <div id="postm">
+
+                                    <svg id="d1" xmlns="http://www.w3.org/2000/svg"
+                                        style="display: none; padding-right:10px;" width="62" height="62"
+                                        fill="currentColor" class=" a11 bi bi-heart-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z">
+                                        </path>
+                                    </svg>
+
+                                    <svg id="d2" xmlns="http://www.w3.org/2000/svg" style="padding-right: 10px;"
+                                        width="62" height="62" fill="currentColor" class=" svg1 a12 bi bi-heart"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="combox3">
+                                <label for="">Your photography skills are on point! 👌</label>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="combx2">
+                            <div class="postmenucom">
+
+
+                                <div class="postmenulogo">
+                                    <img src="img/images (1).jpeg" alt="">
+                                </div>
+                                <label class="postname">Andrew <span
+                                        style="font-size:33px; color: lightgray; font-weight: 500;">1w</span></label>
+                                <div id="postm">
+
+                                    <svg id="e1" xmlns="http://www.w3.org/2000/svg"
+                                        style="display: none; padding-right:10px;" width="62" height="62"
+                                        fill="currentColor" class=" a11 bi bi-heart-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z">
+                                        </path>
+                                    </svg>
+
+                                    <svg id="e2" xmlns="http://www.w3.org/2000/svg" style="padding-right: 10px;"
+                                        width="62" height="62" fill="currentColor" class=" svg1 a12 bi bi-heart"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="combox3">
+                                <label for="">I love how you capture the essence of every place you visit! 🌍</label>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="combx2">
+                            <div class="postmenucom">
+
+
+                                <div class="postmenulogo">
+                                    <img src="img/images (5).jpg" alt="">
+                                </div>
+                                <label class="postname">itachi <span
+                                        style="font-size:33px; color: lightgray; font-weight: 500;">1w</span></label>
+                                <div id="postm">
+
+                                    <svg id="f1" xmlns="http://www.w3.org/2000/svg"
+                                        style="display: none; padding-right:10px;" width="62" height="62"
+                                        fill="currentColor" class=" a11 bi bi-heart-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z">
+                                        </path>
+                                    </svg>
+
+                                    <svg id="f2" xmlns="http://www.w3.org/2000/svg" style="padding-right: 10px;"
+                                        width="62" height="62" fill="currentColor" class=" svg1 a12 bi bi-heart"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="combox3">
+                                <label for="">🔥🔥🔥🔥🔥🔥</label>
+                            </div>
+
+                        </div>
+                    </section>
+
+
+                    <section>
+                        <div class="combx2">
+                            <div class="postmenucom">
+
+
+                                <div class="postmenulogo">
+                                    <img src="img/images (3).jpg" alt="">
+                                </div>
+                                <label class="postname">Amelia <span
+                                        style="font-size:33px; color: lightgray; font-weight: 500;">1w</span></label>
+                                <div id="postm">
+
+                                    <svg id="g1" xmlns="http://www.w3.org/2000/svg"
+                                        style="display: none; padding-right:10px;" width="62" height="62"
+                                        fill="currentColor" class=" a11 bi bi-heart-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z">
+                                        </path>
+                                    </svg>
+
+                                    <svg id="g2" xmlns="http://www.w3.org/2000/svg" style="padding-right: 10px;"
+                                        width="62" height="62" fill="currentColor" class=" svg1 a12 bi bi-heart"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="combox3">
+                                <label for="">Your photography skills are on point! 🔥🔥🔥🔥🔥🔥</label>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- ------------------------------------------ strat ------------------------------------------ -->
+
+                    <!-- <section>
+                <div class="combx2">
+                    <div class="postmenucom">
+    
+    
+                        <div class="postmenulogo">
+                            <img src="img/images (3).jpg" alt="">
+                        </div>
+                        <label class="postname">Amelia <span
+                                style="font-size:33px; color: lightgray; font-weight: 500;">1w</span></label>
+                        <div id="postm">
+    
+                            <svg id="g1" xmlns="http://www.w3.org/2000/svg" style="display: none; padding-right:10px;"
+                                width="62" height="62" fill="currentColor" class=" a11 bi bi-heart-fill"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                            </svg>
+    
+                            <svg id="g2" xmlns="http://www.w3.org/2000/svg" style="padding-right: 10px;" width="62"
+                                height="62" fill="currentColor" class=" svg1 a12 bi bi-heart" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                            </svg>
+                        </div>
+                    </div>
+    
+                    <div class="combox3">
+                        <label for="">Your photography skills are on point! 🔥🔥🔥🔥🔥🔥</label>
+                    </div>
+    
+                </div>
+            </section>
+    
+            <section>
+                <div class="combx2">
+                    <div class="postmenucom">
+    
+    
+                        <div class="postmenulogo">
+                            <img src="img/images (3).jpg" alt="">
+                        </div>
+                        <label class="postname">Amelia <span
+                                style="font-size:33px; color: lightgray; font-weight: 500;">1w</span></label>
+                        <div id="postm">
+    
+                            <svg id="g1" xmlns="http://www.w3.org/2000/svg" style="display: none; padding-right:10px;"
+                                width="62" height="62" fill="currentColor" class=" a11 bi bi-heart-fill"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                            </svg>
+    
+                            <svg id="g2" xmlns="http://www.w3.org/2000/svg" style="padding-right: 10px;" width="62"
+                                height="62" fill="currentColor" class=" svg1 a12 bi bi-heart" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                            </svg>
+                        </div>
+                    </div>
+    
+                    <div class="combox3">
+                        <label for="">Your photography skills are on point! 🔥🔥🔥🔥🔥🔥</label>
+                    </div>
+    
+                </div>
+            </section>
+    
+    
+            <section>
+                <div class="combx2">
+                    <div class="postmenucom">
+    
+    
+                        <div class="postmenulogo">
+                            <img src="img/images (3).jpg" alt="">
+                        </div>
+                        <label class="postname">Amelia <span
+                                style="font-size:33px; color: lightgray; font-weight: 500;">1w</span></label>
+                        <div id="postm">
+    
+                            <svg id="g1" xmlns="http://www.w3.org/2000/svg" style="display: none; padding-right:10px;"
+                                width="62" height="62" fill="currentColor" class=" a11 bi bi-heart-fill"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                            </svg>
+    
+                            <svg id="g2" xmlns="http://www.w3.org/2000/svg" style="padding-right: 10px;" width="62"
+                                height="62" fill="currentColor" class=" svg1 a12 bi bi-heart" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                            </svg>
+                        </div>
+                    </div>
+    
+                    <div class="combox3">
+                        <label for="">Your photography skills are on point! 🔥🔥🔥🔥🔥🔥</label>
+                    </div>
+    
+                </div>
+            </section> -->
+
+
+                    <!-- ------------------------------------------ end ------------------------------------------ -->
+
+                    <section>
+                        <div class="combx2">
+                            <div class="postmenucom">
+
+
+                                <div class="postmenulogo">
+                                    <img src="img/images (1).jpg" alt="">
+                                </div>
+                                <label class="postname">Amelia <span
+                                        style="font-size:33px; color: lightgray; font-weight: 500;">1w</span></label>
+                                <div id="postm">
+
+                                    <svg id="h1" xmlns="http://www.w3.org/2000/svg"
+                                        style="display: none; padding-right:10px;" width="62" height="62"
+                                        fill="currentColor" class=" a11 bi bi-heart-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z">
+                                        </path>
+                                    </svg>
+
+                                    <svg id="h2" xmlns="http://www.w3.org/2000/svg" style="padding-right: 10px;"
+                                        width="62" height="62" fill="currentColor" class=" svg1 a12 bi bi-heart"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="combox3">
+                                <label for="">Your photography skills are on point! 👌</label>
+                            </div>
+
+                        </div>
+                    </section>
+
+
+
+
+
+                    <div class="commentmanebox">
+                        <div class="profilebox11">
+                            <img src="img/images (1).jpeg" alt="">
+                        </div>
+                        <input type="text" placeholder=" new comment " fdprocessedid="adiexo">
+                    </div>
+                </div>
+                <!-- <div style="height: 102px;"></div> -->
+            </section>
+
+            <!-- <div id="reels1" class="trabox"></div> -->
+
+
+        </section>
+        <!-- -------------------------------------------------- End reel -------------------------------------------------- -->
+
+
+        <!-- -------------------------------------------------- second reel -------------------------------------------------- -->
+        <section id="reel2">
+            <div class="reel">
+                <video class="reel-video" autoplay loop muted>
+                    <source src="img/r2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <ul class="buttonreel">
+                    <li id="b1"><svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor"
+                            class="bi bi-heart" viewBox="0 0 16 16">
+                            <path
+                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                        </svg>
+                    <li id="b2"><svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor"
+                            class="bi bi-heart-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
+                        </svg>
+                    </li>
+                    <li class="textreel">20k</li>
+
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 24 24" fill="none"
+                            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="bi-chat lucide lucide-message-circle">
+                            <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z" />
+                        </svg>
+                    </li>
+
+                    <li class="textreel">3k</li>
+
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 24 24" fill="none"
+                            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-send">
+                            <path d="m22 2-7 20-4-9-9-4Z" />
+                            <path d="M22 2 11 13" />
+                        </svg></li>
+
+                    <li class="textreel">40k</li>
+
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 24 24" fill="none"
+                            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-more-vertical">
+                            <circle cx="12" cy="12" r="1" />
+                            <circle cx="12" cy="5" r="1" />
+                            <circle cx="12" cy="19" r="1" />
+                        </svg></li>
+
+                    <li style="height: 30px;"></li>
+                    <li class="proicon"><img src="img/r1.jpg" alt=""></li>
+                </ul>
+
+                <div class="prolog">
+                    <img class="r1" src="img/r1.jpg" alt="">
+                    <label for="">naruto</label>
+                    <button id="btn11" class="followbtn" type="text">Follow</button>
+                    <button id="btn21" class="followbtn1" type="text">Follow</button>
+
+                </div>
+                <div
+                    style="font-size: 40px; font-weight: 600; padding-left: 50px; padding-top: 50px; position: absolute; bottom: 4%;">
+                    <label for="">Planing of exam ....</label>
+
+                    <div class="music">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                            class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+                            <path
+                                d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2m9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2" />
+                            <path fill-rule="evenodd" d="M14 11V2h1v9zM6 3v10H5V3z" />
+                            <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4z" />
+                        </svg>
+                        <label for=""> copy_ninja .Original audio</label>
+                    </div>
+
+                </div>
+                <div class="careel">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-camera">
+                        <path
+                            d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+                        <circle cx="12" cy="13" r="3" />
+                    </svg>
+                </div>
+
+
+            </div>
+
+          
+
+            <!-- <div id="reels2" class="trabox1"></div> -->
+
+        </section>
+        <!-- -------------------------------------------------- End reel -------------------------------------------------- -->
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#a1").click(function () {
+                $("#a2").show();
+                $("#a1").hide();
+
+            });
+
+            $("#a2").click(function () {
+                $("#a1").show();
+                $("#a2").hide();
+
+            });
+
+
+            $("#b1").click(function () {
+                $("#b2").show();
+                $("#b1").hide();
+
+            });
+
+            $("#b2").click(function () {
+                $("#b1").show();
+                $("#b2").hide();
+
+            });
+
+
+            $("#d2").click(function () {
+                $("#d2").hide();
+                $("#d1").show();
+            });
+
+            $("#e2").click(function () {
+                $("#e2").hide();
+                $("#e1").show();
+            });
+
+            $("#f2").click(function () {
+                $("#f2").hide();
+                $("#f1").show();
+            });
+
+            $("#g2").click(function () {
+                $("#g2").hide();
+                $("#g1").show();
+            });
+
+            $("#h2").click(function () {
+            $("#h2").hide();
+            $("#h1").show();
+        });
+
+
+
+            $("#btn1").click(function () {
+                $("#btn2").show();
+                $("#btn1").hide();
+
+            });
+
+            $("#btn2").click(function () {
+                $("#btn1").show();
+                $("#btn2").hide();
+
+            });
+
+
+            $("#btn11").click(function () {
+                $("#btn21").show();
+                $("#btn11").hide();
+
+            });
+
+            $("#btn21").click(function () {
+                $("#btn11").show();
+                $("#btn21").hide();
+
+            });
+
+
+
+            // $("#reels1").click(function () {
+                // $("#reel1").css("height","0px");
+                // $("#reel2").css("height","100vh");
+                // $("#reel1").hide("slow");
+                // $("#reel2").show("slow");
+
+            // });
+
+            // $("#reels2").click(function () {
+                // $("#reel1").css("height","0px");
+                // $("#reel2").css("height","100vh");
+                // $("#reel2").hide("slow");
+                // $("#reel1").show("slow");
+
+            // });
+
+        });
+
+       
+
+      
+
+        $(document).ready(function () {
+
+            $(".bi-chat").click(function () {
+                // $("#commentbox12").show("");
+                $(".commentbox").css("height", "85vh");
+            });
+
+            $("#combar").click(function () {
+                // $("#commentbox12").hide();
+                $(".commentbox").css("height", "0px");
+
+            });
+
+        });
+
+
+
+    </script>
+
+    <!-- <script>
+        function myfun(){
+        // document.getElementsByClassName('followbtn').style.backgroundColor = "withe";
+        document.getElementById("btn1").style.backgroundColor = "white";
+        document.getElementById("btn1").style.color = "rgba(0, 0, 0, 0.474)";
+        }
+    </script> -->
+</body>
+
+</html>

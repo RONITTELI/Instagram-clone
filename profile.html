@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - Instagram Clone</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"); -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>PRofile</title>
+  <style>
+    .bi {
+      color: white;
+      margin-top: 20px;
+    }
+
+    body {
+      background-color: black;
+    }
+
+    .profilelogo img {
+      border-radius: 50%;
+      width: 200px;
+    }
+
+    .probox1 {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100wh;
+      height: 300px;
+      background-color: black;
+      color: white;
+    }
+
+    .probox2 {
+      display: grid;
+      font-size: 40px;
+      text-align: center;
+      font-weight: 700;
+
+    }
+
+    .captionbox {
+      width: 100wh;
+      height: fit-content;
+      background-color: black;
+      color: white;
+
+    }
+
+    .cap {
+      width: 45%;
+      height: fit-content;
+      /* text-align: center; */
+      padding-left: 43px;
+      display: grid;
+    }
+
+    .cap h1 {
+      font-weight: 700;
+      font-size: 40px;
+    }
+
+    .cap label {
+      font-size: 30px;
+      color: rgb(196, 221, 243);
+      padding-bottom: 5px;
+
+    }
+
+    .Editbox {
+      width: auto;
+      height: 100px;
+      display: grid;
+      grid-template-columns: 5fr 5fr 1fr;
+      column-gap: 15px;
+      margin: 15px;
+      background-color: black;
+
+    }
+
+    .Editmenbox {
+      /* width: 40%; */
+      padding: 15px;
+      font-size: 42px;
+      font-weight: 700;
+      background-color: rgb(41, 41, 41);
+      border-radius: 15px;
+      color: white;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: space-around;
+
+    }
+
+    .eb1 {
+      /* width: 10%; */
+      padding: 15px 0px 15px 15px;
+      font-size: 42px;
+      font-weight: 700;
+      background-color: rgb(41, 41, 41);
+      border-radius: 15px;
+      color: white;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: space-around;
+
+    }
+
+    .lucide {
+      color: white;
+    }
+
+
+    .prb2 {
+      width: auto;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+    }
+
+    .profilebox2 {
+      width: auto;
+      height: max-content;
+      /* background-color: aliceblue; */
+    }
+
+    .proimg {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .pi img {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+    }
+
+
+    .proreel h1 {
+      padding-top: 100px;
+      color: white;
+      font-size: 55px;
+      text-align: center;
+    }
+
+    .proreel h4 {
+      padding-top: 18px;
+      color: rgb(40, 40, 222);
+      font-size: 35px;
+      text-align: center;
+
+    }
+
+
+
+
+
+    .prophoto {
+      padding-top: 400px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #p2 {
+      display: none;
+    }
+
+    #p3 {
+      display: none;
+    }
+
+    .o1border {
+      width: 330px;
+      height: 5px;
+      background-color: white;
+      margin-bottom: 10px;
+      transition: all 0.8s;
+    }
+
+    .probox3 {
+      border-bottom: 1px solid wheat;
+
+    }
+
+    .commentbox1 {
+    width: 100%;
+    height: 0px;
+    border-radius: 50px 50px 0px 0px;
+    background-color: rgb(78, 78, 78);
+    position: fixed;
+    /* overflow-x:hidden; */
+    bottom: 0px;
+    transition: all 0.8s;
+}
+
+.menubar {
+  display: flex;
+  align-items: center;
+  margin: 60px 20px;
+
+}
+.menubar svg {
+  padding-left: 35px;
+  margin-top: 0px;
+}
+
+.menubar label {
+  font-size: 50px;
+  font-weight: 700;
+  color: white;
+  padding-left: 40px;
+}
+  </style>
+</head>
+
+<body>
+  <div class="messbartop">
+
+
+    <a href="index.html"><svg style="padding-left: 25px;" xmlns="http://www.w3.org/2000/svg" width="80"
+        height="80" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+      </svg></a>
+
+
+    <div class="boxm1">
+      <h1>ronitteli</h1>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="bi lucide lucide-chevron-down">
+        <path d="m6 9 6 6 6-6" />
+      </svg>
+    </div>
+
+
+    <div style="display: flex; justify-content:space-around;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-camera-video"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z" />
+      </svg>
+
+
+
+      <svg id="chat" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="bi lucide lucide-menu">
+        <line x1="4" x2="20" y1="12" y2="12" />
+        <line x1="4" x2="20" y1="6" y2="6" />
+        <line x1="4" x2="20" y1="18" y2="18" />
+      </svg>
+    </div>
+  </div>
+  <div style="height: 130px;"></div>
+
+  <div class="probox1">
+    <div class="profilelogo">
+      <img src="img/images (1).jpeg" alt="">
+    </div>
+    <div class="probox2">
+      <label for="">1</label>
+      <label for="">Posts</label>
+    </div>
+
+    <div class="probox2">
+      <label for="">244</label>
+      <label for="">Follwers</label>
+    </div>
+
+    <div class="probox2">
+      <label for="">95</label>
+      <label for="">Following</label>
+    </div>
+
+  </div>
+
+  <div class="captionbox">
+    <div class="cap">
+      <h1>Ronit Teli</h1>
+      <label for="">#Coolest boy</label>
+      <label for="">#Artist</label>
+      <label for="">#Coderlife</label>
+    </div>
+  </div>
+  <div class="Editbox">
+
+    <div class="Editmenbox">Edit profile</div>
+    <div class="Editmenbox">Share profile</div>
+    <div class="eb1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-user-plus">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <line x1="19" x2="19" y1="8" y2="14" />
+        <line x1="22" x2="16" y1="11" y2="11" />
+      </svg>
+    </div>
+  </div>
+  <div
+    style="width: 100wh; display: flex; background-color: black; color: white; font-size: 38px; font-weight: 600; justify-content: space-between; padding:34px;">
+    <label for="">Story highlights</label>
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down">
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+
+  </div>
+
+
+
+
+
+
+  <div class="prb2">
+
+    <svg id="o1" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="lucide lucide-grid-3x3">
+      <rect width="18" height="18" x="3" y="3" rx="2" />
+      <path d="M3 9h18" />
+      <path d="M3 15h18" />
+      <path d="M9 3v18" />
+      <path d="M15 3v18" />
+    </svg>
+
+    <img id="o2" src="img/reel.png" width="70px" alt="">
+
+    <svg id="o3" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="lucide lucide-contact-2">
+      <path d="M16 18a4 4 0 0 0-8 0" />
+      <circle cx="12" cy="11" r="3" />
+      <rect width="18" height="18" x="3" y="4" rx="2" />
+      <line x1="8" x2="8" y1="2" y2="4" />
+      <line x1="16" x2="16" y1="2" y2="4" />
+    </svg>
+
+  </div>
+
+
+  <div class="probox3">
+    <div class="o1border"></div>
+  </div>
+
+
+
+
+
+  <div class="profilebox2">
+
+    <section id="p1">
+      <div class="proimg">
+
+        <div class="pi">
+          <img src="img/images (1).jpeg" alt="">
+        </div>
+
+      </div>
+    </section>
+
+    <section id="p2">
+      <div class="proreel">
+        <h1>share a moment with the World</h1>
+        <h4>Create your first reel</h4>
+      </div>
+    </section>
+
+
+
+
+
+    <section id="p3">
+      <div class="prophoto">
+
+        <div
+          style="width: 250px; height: 250px; border-radius: 200px; border: 10px solid white; display: flex; align-items: center; justify-content: center;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-contact-2">
+            <path d="M16 18a4 4 0 0 0-8 0" />
+            <circle cx="12" cy="11" r="3" />
+            <rect width="18" height="18" x="3" y="4" rx="2" />
+            <line x1="8" x2="8" y1="2" y2="4" />
+            <line x1="16" x2="16" y1="2" y2="4" />
+          </svg>
+        </div>
+        <div style="width: 100%; display: flex; justify-content: center;">
+          <h1 style="font-size: 60px; color: white; text-align: center;">Photos and <br>videos of you </h1>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- ------------------------------------------ Menu ------------------------------------------ -->
+
+  <section>
+    <div id="menubox1" class="commentbox1">
+      <div class="commmentupbat">
+        <div class="commentbar" id="combar"></div>
+      </div>
+      <div style="background-color: transparent; height: 100px;"></div>
+
+      <div class="menubar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-gear-wide" viewBox="0 0 16 16">
+          <path d="M8.932.727c-.243-.97-1.62-.97-1.864 0l-.071.286a.96.96 0 0 1-1.622.434l-.205-.211c-.695-.719-1.888-.03-1.613.931l.08.284a.96.96 0 0 1-1.186 1.187l-.284-.081c-.96-.275-1.65.918-.931 1.613l.211.205a.96.96 0 0 1-.434 1.622l-.286.071c-.97.243-.97 1.62 0 1.864l.286.071a.96.96 0 0 1 .434 1.622l-.211.205c-.719.695-.03 1.888.931 1.613l.284-.08a.96.96 0 0 1 1.187 1.187l-.081.283c-.275.96.918 1.65 1.613.931l.205-.211a.96.96 0 0 1 1.622.434l.071.286c.243.97 1.62.97 1.864 0l.071-.286a.96.96 0 0 1 1.622-.434l.205.211c.695.719 1.888.03 1.613-.931l-.08-.284a.96.96 0 0 1 1.187-1.187l.283.081c.96.275 1.65-.918.931-1.613l-.211-.205a.96.96 0 0 1 .434-1.622l.286-.071c.97-.243.97-1.62 0-1.864l-.286-.071a.96.96 0 0 1-.434-1.622l.211-.205c.719-.695.03-1.888-.931-1.613l-.284.08a.96.96 0 0 1-1.187-1.186l.081-.284c.275-.96-.918-1.65-1.613-.931l-.205.211a.96.96 0 0 1-1.622-.434L8.932.727zM8 12.997a4.998 4.998 0 1 1 0-9.995 4.998 4.998 0 0 1 0 9.996z"/>
+        </svg>
+
+        <label for="">Setting and privacy </label>
+      </div>
+
+      <div class="menubar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-at-sign"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg>
+
+        <label for="">Threads</label>
+      </div>
+      
+
+      <div class="menubar">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity-square"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M17 12h-2l-2 5-2-10-2 5H7"/></svg>
+        <label for="">Your action</label>
+
+      </div>
+      
+      
+      <div class="menubar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-history"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>
+
+        <label for="">Archive</label>
+      </div>
+
+      <div class="menubar">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-qr-code-scan" viewBox="0 0 16 16">
+          <path d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1v2.5a.5.5 0 0 1-1 0v-3Zm12 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0V1h-2.5a.5.5 0 0 1-.5-.5ZM.5 12a.5.5 0 0 1 .5.5V15h2.5a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5Zm15 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H15v-2.5a.5.5 0 0 1 .5-.5ZM4 4h1v1H4V4Z"/>
+          <path d="M7 2H2v5h5V2ZM3 3h3v3H3V3Zm2 8H4v1h1v-1Z"/>
+          <path d="M7 9H2v5h5V9Zm-4 1h3v3H3v-3Zm8-6h1v1h-1V4Z"/>
+          <path d="M9 2h5v5H9V2Zm1 1v3h3V3h-3ZM8 8v2h1v1H8v1h2v-2h1v2h1v-1h2v-1h-3V8H8Zm2 2H9V9h1v1Zm4 2h-1v1h-2v1h3v-2Zm-4 2v-1H8v1h2Z"/>
+          <path d="M12 9h2V8h-2v1Z"/>
+        </svg>
+        <label for="">QR code</label>
+      </div>
+
+      <div class="menubar">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+        <label for="">Saved</label>
+      </div>
+
+      <div class="menubar">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <label for="">Supervision</label>
+      </div>
+
+      <div class="menubar">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-credit-card-2-back" viewBox="0 0 16 16">
+          <path d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1z"/>
+          <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm13 2v5H1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm-1 9H2a1 1 0 0 1-1-1v-1h14v1a1 1 0 0 1-1 1z"/>
+        </svg>
+        <label for="">Orders and payments</label>
+      </div>
+      
+      <div class="menubar">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-badge-check"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+        <label for="">Meta Verified</label>
+      </div>
+
+      <div class="menubar">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-list-stars" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5z"/>
+          <path d="M2.242 2.194a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.277.277 0 0 0-.094.3l.173.569c.078.256-.213.462-.423.3l-.417-.324a.267.267 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.277.277 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.271.271 0 0 0 .259-.194l.162-.53zm0 4a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.277.277 0 0 0-.094.3l.173.569c.078.255-.213.462-.423.3l-.417-.324a.267.267 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.277.277 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.271.271 0 0 0 .259-.194l.162-.53zm0 4a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.277.277 0 0 0-.094.3l.173.569c.078.255-.213.462-.423.3l-.417-.324a.267.267 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.277.277 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.271.271 0 0 0 .259-.194l.162-.53z"/>
+        </svg>
+        <label for="">Lists</label>
+      </div>
+
+
+
+      <div class="menubar">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <label for="">Favorites</label>
+      </div>
+
+
+
+    </div>
+  </section>
+
+  <!-- ------------------------------------------end ------------------------------------------ -->
+
+  <div class="instaagrambottumbox">
+
+    <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" fill="currentColor"
+        class="bi bi-house-door-fill instaagrambottumboxlogo" viewBox="0 0 16 16">
+        <path
+          d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+      </svg></a>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" fill="currentColor" class="bi bi-search"
+      viewBox="0 0 16 16">
+      <path
+        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" fill="currentColor" class="bi bi-plus-square"
+      viewBox="0 0 16 16">
+      <path
+        d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+    </svg>
+
+    <a href="reel.html"><img src="img/reel.png" style="width: 62px; height: 62px;" alt=""></a>
+
+    <a href="profile.html"><img src="img/images (1).jpeg" class="profileicon111" alt=""></a>
+
+
+  </div>
+
+
+  <footer>
+    <div style="height: 130px;"></div>
+  </footer>
+
+  <script>
+    $(document).ready(function () {
+
+      $("#o1").click(function () {
+        $("#p1").show("slow");
+        $("#p2").hide("slow");
+        $("#p3").hide("slow");
+        $(".o1border").css("margin-left", "0px");
+
+
+      });
+
+      $("#o2").click(function () {
+        $("#p2").show("slow");
+        $("#p1").hide("slow");
+        $("#p3").hide("slow");
+        $(".o1border").css("margin-left", "330px");
+
+      });
+
+      $("#o3").click(function () {
+        $("#p3").show("slow");
+        $("#p1").hide("slow");
+        $("#p2").hide("slow");
+        $(".o1border").css("margin-left", "660px");
+
+
+        // $("#chat").click(function () {
+        //   $("#menubox1").hide();
+        // });
+
+
+
+      });
+
+     
+    });
+
+//     $(document).ready(function(){
+
+// $("#chat").click(function(){
+// $("#menubox1").show();
+// });
+
+// $("#combar").click(function(){
+// $("#menubox1").hide();
+// });
+
+// });
+
+
+$(document).ready(function(){
+
+$("#chat").click(function(){
+// $("#menubox1").show();
+$(".commentbox1").css("height","85vh");
+
+});
+
+$("#combar").click(function(){
+  $(".commentbox1").css("height","0px");
+});
+
+});
+  </script>
+</body>
+
+</html>
